@@ -114,11 +114,15 @@ Saiba, porém, que o meu sentimento continua o mesmo ❤️
 
     function tocarMusica() {
       const musica = document.getElementById("musica");
-      musica.play();
-    }
+      musica.currentTime = 0;
+      musica.play().catch(err => {
+        alert("Toque na tela novamentepara liberar o audio");
+      });
+    });
   </script>
 
 </body>
 </html>
+
 
 
